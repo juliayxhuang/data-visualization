@@ -1,0 +1,13 @@
+# Herbenick et al. (2010): orgasm at most recent partnered sexual event by age
+
+**Source:** Debby Herbenick, Michael Reece, Vanessa Schick, Stephanie A. Sanders, Brian Dodge, and J. Dennis Fortenberry, “An Event-Level Analysis of the Sexual Characteristics and Composition Among Adults Ages 18 to 59: Results from a National Probability Sample in the United States,” *The Journal of Sexual Medicine* 7, supplement 5 (2010): 346–361. [DOI](https://doi.org/10.1111/j.1743-6109.2010.02020.x); [public copy of published paper](https://ptacts.uspto.gov/ptacts/public-informations/petitions/1529841/download-documents?artifactId=5-Uaf_ScYGSvgNoPhoK33bGHjOeR1CiyzsVIg46p_Al_eLuCXFak4-c). Accessed 2026-11-09.
+
+**Extraction:** [Table 3 transcription](../../data/raw/herbenick-2010-age-event-orgasm.csv). These are the paper's weighted percentages answering yes to whether they had an orgasm at their **most recent partnered sexual event**, with printed 95% confidence intervals. Values are directly reported percentages, not adjusted regression coefficients. The paper also reports separate adjusted odds ratios in Table 3; those are not in the CSV.
+
+**Study/sample:** 2009 U.S. National Survey of Sexual Health and Behavior probability panel. The analyzed sample was 1,931 adults aged 18–59 who reported partnered sexual activity in the preceding year: 1,048 men and 883 women. Table 1 lists age-band participant counts, but the exact age-band denominators for the orgasm item are not established here, so they are not given in the CSV. Post-stratification weights were used.
+
+**Question/response:** Participants were asked whether they had an orgasm at the most recent sexual event with another person; response options were yes, no, or not sure. The CSV records the yes percentage. The sample included mostly other-sex encounters but also some same-sex encounters; these rows are by the paper's men/women categories, not heterosexual-only groups.
+
+**Interpretation limits:** This is one reported event per sexually active respondent, not a person's usual orgasm frequency or an age-specific percentage of all sexual encounters. The cross-sectional differences do not show how an individual's experience changes with age. Study data are from 2009 and stop at age 59. Do not combine these percentages numerically with Frederick's usually/always figures or Gesselman's estimated intercourse rates.
+
+**Verification:** Values transcribed from Table 3 in the public PDF text. Before publication, check the page image against the transcription, especially confidence intervals; the PDF text extraction visibly garbles some unrelated table rows.

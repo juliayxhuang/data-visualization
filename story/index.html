@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An in-progress exploration of pleasure and research.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+  <title>The Big O — opening draft</title>
+</head>
+<body>
+  <svg class="svg-filters" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="red-ink" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#cf0b2e" result="ink" />
+        <feComposite in="ink" in2="SourceAlpha" operator="in" />
+      </filter>
+    </defs>
+  </svg>
+  <main>
+    <header class="hero" aria-labelledby="page-title">
+      <h1 id="page-title" class="title">
+        <span class="title-words">The Big</span>
+        <span class="title-o" aria-hidden="true"></span>
+        <span class="visually-hidden">O</span>
+      </h1>
+    </header>
+
+    <section class="introduction" id="introduction" aria-labelledby="introduction-heading">
+      <div class="intro-copy">
+        <h2 id="introduction-heading" class="visually-hidden">Introduction</h2>
+        <p>Pleasure is intimate, ordinary, and surprisingly hard to describe. It can be felt alone or with someone else. It can be anticipated, interrupted, or never spoken about at all.</p>
+        <p>We often talk about sex as though pleasure naturally follows, and as though everyone means the same thing when they say it does. But what do we actually know about how people experience it?</p>
+        <p>Researchers have tried to turn private experiences into numbers. Those numbers can reveal patterns, though they cannot tell the whole story. Let’s begin with one of them.</p>
+      </div>
+    </section>
+
+    <aside class="category-context" aria-label="About the study categories">
+      <p class="study-limit">*This project uses categories reported in one study, not a complete list of identities. Its results describe the study's participants; they do not predict your experience.</p>
+      <details class="study-details">
+        <summary>Click here to learn more about these categories.</summary>
+        <p><a href="https://doi.org/10.1007/s10508-017-0939-z">Frederick et al. (2018)</a> reported orgasm-frequency results for six groups: heterosexual, lesbian, and bisexual women; and heterosexual, gay, and bisexual men. The paper calls its comparison one of gender and sexual orientation, but does not give the exact wording of the survey's sex or gender question. It does not report a result for every identity. The figures describe responses from this study's participants, not any individual's likelihood of orgasm.</p>
+      </details>
+    </aside>
+
+    <section class="identity-question" id="gender-question" aria-labelledby="gender-heading">
+      <h2 id="gender-heading" tabindex="-1">Which group would you like to explore?</h2>
+      <fieldset class="choice-options gender-options" id="gender-options">
+        <legend class="visually-hidden">Choose a female or male study category</legend>
+        <label class="choice-option">
+          <input type="radio" name="study-category" value="female">
+          <span class="choice-content">
+            <svg class="choice-illustration" viewBox="888 160 992 1644" aria-hidden="true"><image href="assets/female.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+            <span class="choice-label">Female</span>
+          </span>
+        </label>
+        <label class="choice-option">
+          <input type="radio" name="study-category" value="male">
+          <span class="choice-content">
+            <svg class="choice-illustration" viewBox="480 220 1616 1652" aria-hidden="true"><image href="assets/male.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+            <span class="choice-label">Male</span>
+          </span>
+        </label>
+      </fieldset>
+      <div class="orientation-step" id="orientation-step" hidden>
+        <fieldset class="choice-options orientation-options">
+          <legend class="visually-hidden">Choose a sexual orientation category</legend>
+          <label class="choice-option">
+            <input type="radio" name="orientation-category" value="straight">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="880 244 1592 1728" aria-hidden="true"><image href="assets/straight.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Straight</span>
+            </span>
+          </label>
+          <label class="choice-option">
+            <input type="radio" name="orientation-category" value="bisexual">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="472 304 2092 1544" aria-hidden="true"><image href="assets/bisexual.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Bisexual</span>
+            </span>
+          </label>
+          <label class="choice-option" id="gay-option" hidden>
+            <input type="radio" name="orientation-category" value="gay">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="852 248 1472 1408" aria-hidden="true"><image href="assets/gay.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Gay</span>
+            </span>
+          </label>
+          <label class="choice-option" id="lesbian-option" hidden>
+            <input type="radio" name="orientation-category" value="lesbian">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="676 472 1396 1476" aria-hidden="true"><image href="assets/lesbian.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Lesbian</span>
+            </span>
+          </label>
+        </fieldset>
+        <button class="change-group" id="change-group" type="button">Change female or male choice</button>
+      </div>
+    </section>
+
+    <section class="result-section" id="result-section" aria-labelledby="result-heading" hidden>
+      <h2 id="result-heading" class="visually-hidden">Selected study group</h2>
+      <div class="result-layout">
+        <div class="result-art" id="result-art">
+          <svg class="result-dots" viewBox="0 0 800 800" aria-hidden="true"><g id="result-dots"></g></svg>
+          <div class="result-center">
+            <span id="result-percent"></span>
+            <span id="result-group"></span>
+          </div>
+        </div>
+        <div class="result-selection">
+          <h3>You chose:</h3>
+          <div class="result-icons" aria-hidden="true">
+            <span class="result-selected-icon" id="result-orientation-icon"></span>
+            <span class="result-selected-icon" id="result-gender-icon"></span>
+          </div>
+          <p class="visually-hidden" id="result-selected-text"></p>
+        </div>
+      </div>
+      <p class="result-summary" id="result-summary" aria-live="polite"></p>
+      <p class="result-note">Filled dots show the reported percentage; outlined dots complete 100. Each dot is one percentage point, not one participant.</p>
+      <p class="result-source"><a href="https://doi.org/10.1007/s10508-017-0939-z">Frederick et al. (2018)</a> · <a id="result-export" href="#">View the original Processing image</a></p>
+      <button class="change-answer" id="change-answer" type="button">Change answer</button>
+    </section>
+  </main>
+</body>
+</html>

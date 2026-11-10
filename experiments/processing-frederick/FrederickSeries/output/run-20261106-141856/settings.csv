@@ -1,0 +1,12 @@
+parameter,value
+canvas_logical_pixels,1200
+dot_diameter,6.4
+row_step,9.2
+first_ring_radius,140.0
+ring_step,60.0
+color_heterosexual-men,#FFB3421B
+color_gay-men,#FF146B9C
+color_bisexual-men,#FF087F5B
+color_lesbian-women,#FF97508D
+color_bisexual-women,#FFA86A00
+color_heterosexual-women,#FF5B60A8

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Big O: a playful, research-grounded look at the orgasm gap. Combined draft.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="combined.css">
+  <script src="combined.js" defer></script>
+  <title>The Big O — combined draft</title>
+</head>
+<!--
+  Combined draft (2026-11-09): "The Big O" opening from index.html plus the side-scroll and sound
+  experiments from the orgasm-gap project. index.html is untouched. All copy is an agent draft for
+  the student to edit. Each section uses one study; numbers from different studies are never compared.
+-->
+<body>
+  <svg class="svg-filters" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="red-ink" color-interpolation-filters="sRGB">
+        <feFlood flood-color="#cf0b2e" result="ink" />
+        <feComposite in="ink" in2="SourceAlpha" operator="in" />
+      </filter>
+    </defs>
+  </svg>
+
+  <button class="sound-toggle" id="sound" type="button" aria-pressed="false">sound off</button>
+
+  <main>
+    <!-- 1. Title -->
+    <header class="hero" aria-labelledby="page-title">
+      <h1 id="page-title" class="title">
+        <span class="title-words">The Big</span>
+        <span class="title-o" aria-hidden="true"></span>
+        <span class="visually-hidden">O</span>
+      </h1>
+    </header>
+
+    <!-- 2. Intro -->
+    <section class="introduction" aria-label="Introduction">
+      <div class="prose">
+        <p>Everyone talks about sex. Hardly anyone talks about how it actually <em>ends</em>.</p>
+        <p>Pleasure is private and a little hard to put into words. It can be shared, or not. It can arrive right on time, show up late, or never turn up at all. We tend to assume it just happens, and that it happens the same way for everyone.</p>
+        <p>Researchers have tried to pin it down anyway, by asking thousands of people very personal questions and turning the answers into numbers. The numbers can't tell the whole story, but they're pretty good at starting one.</p>
+        <p>So let's start with you.</p>
+      </div>
+    </section>
+
+    <!-- 3. Pick a group -->
+    <aside class="category-context prose" aria-label="About the study categories">
+      <p class="study-limit">*This part uses the groups reported in one study, which is not a complete list of identities. The results describe the people who answered the survey; they don't predict your experience.</p>
+      <details class="study-details">
+        <summary>Why are the choices so limited?</summary>
+        <p><a href="https://doi.org/10.1007/s10508-017-0939-z">Frederick et al. (2018)</a> reported results for six groups: heterosexual, lesbian, and bisexual women, and heterosexual, gay, and bisexual men. The paper only reports men and women. It doesn't say whether the survey asked about gender or sex, doesn't mention trans or nonbinary people, and didn't ask about the partner's gender. Anyone outside these six groups isn't in the data, which is a gap of its own.</p>
+      </details>
+    </aside>
+
+    <section class="identity-question" id="gender-question" aria-labelledby="gender-heading">
+      <h2 id="gender-heading" tabindex="-1">Which group would you like to explore?</h2>
+      <fieldset class="choice-options gender-options" id="gender-options">
+        <legend class="visually-hidden">Choose the woman or man study category</legend>
+        <label class="choice-option">
+          <input type="radio" name="study-category" value="female">
+          <span class="choice-content">
+            <svg class="choice-illustration" viewBox="888 160 992 1644" aria-hidden="true"><image href="assets/female.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+            <span class="choice-label">Woman</span>
+          </span>
+        </label>
+        <label class="choice-option">
+          <input type="radio" name="study-category" value="male">
+          <span class="choice-content">
+            <svg class="choice-illustration" viewBox="480 220 1616 1652" aria-hidden="true"><image href="assets/male.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+            <span class="choice-label">Man</span>
+          </span>
+        </label>
+      </fieldset>
+      <div class="orientation-step" id="orientation-step" hidden>
+        <fieldset class="choice-options orientation-options">
+          <legend class="visually-hidden">Choose a sexual orientation category</legend>
+          <label class="choice-option">
+            <input type="radio" name="orientation-category" value="straight">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="880 244 1592 1728" aria-hidden="true"><image href="assets/straight.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Straight</span>
+            </span>
+          </label>
+          <label class="choice-option">
+            <input type="radio" name="orientation-category" value="bisexual">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="472 304 2092 1544" aria-hidden="true"><image href="assets/bisexual.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Bisexual</span>
+            </span>
+          </label>
+          <label class="choice-option" id="gay-option" hidden>
+            <input type="radio" name="orientation-category" value="gay">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="852 248 1472 1408" aria-hidden="true"><image href="assets/gay.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Gay</span>
+            </span>
+          </label>
+          <label class="choice-option" id="lesbian-option" hidden>
+            <input type="radio" name="orientation-category" value="lesbian">
+            <span class="choice-content">
+              <svg class="choice-illustration" viewBox="676 472 1396 1476" aria-hidden="true"><image href="assets/lesbian.png" width="2732" height="2048" filter="url(#red-ink)" /></svg>
+              <span class="choice-label">Lesbian</span>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="result-section" id="result-section" aria-labelledby="result-heading" hidden>
+      <h2 id="result-heading" class="visually-hidden">Selected study group</h2>
+      <div class="result-layout">
+        <div class="result-art">
+          <svg class="result-dots" viewBox="0 0 800 800" aria-hidden="true"><g id="result-dots"></g></svg>
+          <div class="result-center">
+            <span id="result-percent"></span>
+            <span id="result-group"></span>
+          </div>
+        </div>
+        <div class="result-selection">
+          <p class="result-summary" id="result-summary" aria-live="polite"></p>
+          <p class="fine">Filled dots show the reported percentage; outlined dots complete 100. Each dot is one percentage point, not one person.</p>
+          <button class="text-button" id="change-answer" type="button">Change answer</button>
+        </div>
+      </div>
+      <p class="result-next">Hold on to that number. Let's see who it's sitting next to.</p>
+    </section>
+
+    <!-- 4. Everyone else (side scroll) -->
+    <section class="scrolly" id="scrolly-groups" aria-label="All six groups">
+      <div class="graphic">
+        <div class="scene" data-scene="rings">
+          <p class="scene-title">Said they usually or always orgasm when intimate (past month)</p>
+          <div class="ring-grid" id="ring-grid"></div>
+        </div>
+        <div class="scene" data-scene="nights">
+          <div class="pair-pick">
+            <label>Pair <select id="pair-a" aria-label="First group"></select></label>
+            <label>with <select id="pair-b" aria-label="Second group"></select></label>
+          </div>
+          <div class="nights">
+            <div class="night-row"><span class="night-label" id="night-label-a"></span><div class="night-dots" id="nights-a"></div></div>
+            <div class="night-row"><span class="night-label" id="night-label-b"></span><div class="night-dots" id="nights-b"></div></div>
+            <div class="night-row both"><span class="night-label">Both</span><div class="night-dots" id="nights-both"></div></div>
+          </div>
+          <p class="scene-key">Each dot represents 1 night. Filled = got there. Bottom row: filled when both did.</p>
+        </div>
+        <div class="scene" data-scene="loud">
+          <p class="scene-title">Usually or always orgasm, past month</p>
+          <div class="loud-rows" id="loud-rows"></div>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step" data-scene="rings" data-state="mine">
+          <p id="step-mine">Here's every group in the study, side by side.</p>
+        </div>
+        <div class="step" data-scene="rings" data-state="straight">
+          <p>Start with the two biggest groups. <strong>95%</strong> of straight men said they usually or always orgasm when they're intimate with someone. For straight women, it's <strong>65%</strong>.</p>
+          <p>That 30-point difference has a name: <strong>the orgasm gap</strong>.</p>
+          <p class="fine">Frederick et al. (2018): 52,588 adults in relationships who answered an online survey on the NBC News website. People chose to take part, so it's a big sample, not a perfectly representative one.</p>
+        </div>
+        <div class="step" data-scene="nights" data-state="show">
+          <p>Picture twenty nights for a straight man and a straight woman. He gets there on <strong>19</strong> of them. She gets there on <strong>13</strong>.</p>
+          <p>A woo means they got there. An "aww" means they went home without.</p>
+          <p><button class="hear" id="hear-nights" type="button">▶ Play</button></p>
+          <p>Now play matchmaker. Use the menus to pair any two groups and hear how their nights might line up.</p>
+          <p class="fine">Not real couples: the survey didn't pair people up or ask who their partners were. Each group's percentage becomes nights out of 20 (rounded to the nearest 5%), and the two are matched at random each time you play.</p>
+        </div>
+        <div class="step" data-scene="rings" data-state="lesbian">
+          <p>The usual explanation is that women's bodies are just… complicated. A mystery. Some assembly required.</p>
+          <p>But, as you may have found, the same survey found something that doesn't fit. Among the lesbian women who took part, <strong>86%</strong> said they usually or always orgasm, compared with <strong>65%</strong> of the straight women.</p>
+          <p>Women in both groups. Very different numbers.</p>
+        </div>
+        <div class="step" data-scene="rings" data-state="bisexual">
+          <p>And the bisexual women in the study? <strong>66%</strong>, almost exactly the same as the straight women, and 20 points below the lesbian women.</p>
+          <p>So in this survey, at least, the gap doesn't line up neatly with "being a woman."</p>
+          <p class="fine">The survey didn't ask who people's partners were, so orientation is only a rough stand-in for who was in bed. These are the people who answered this survey, not all lesbian or bisexual women.</p>
+        </div>
+        <div class="step" data-scene="loud" data-state="all">
+          <p>Here are all six as sound. Louder means more people in that group usually or always orgasm, and each group gets its own instrument. Don't like your band? Swap instruments with the menus.</p>
+          <p><button class="hear" id="hear-loud-seq" type="button">▶ One by one</button> <button class="hear" id="hear-loud-all" type="button">▶ All together</button></p>
+          <p class="fine">The volume differences are exaggerated 2× so ears can catch them (loudness follows the percentage squared). The bars are exact. Each group keeps its own note, men's groups lower; picking an instrument another group has swaps the two.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Age (full-width chart, text cards scroll over it). Live SVG rebuilt from the Processing
+         sketch's design: Julia's drawings, bottom on 0%, top at the percentage, proportions kept. -->
+    <section class="scrolly overlay" id="scrolly-age" aria-label="Age">
+      <div class="graphic">
+        <div class="scene" data-scene="age">
+          <div class="age-head">
+            <p class="age-title">Orgasm at the most recent partnered sexual event</p>
+            <p class="age-sub">Percentage of each age group who said yes. Hover over a drawing for its exact number.</p>
+          </div>
+          <div class="age-wrap" id="age-wrap">
+            <svg class="age-svg" id="age-svg" role="img" aria-labelledby="age-desc"></svg>
+            <p class="visually-hidden" id="age-desc">Women: 18–24, 61.2%; 25–29, 57.8%; 30–39, 65.3%; 40–49, 68.5%; 50–59, 70.7%. Men: 18–24, 85.7%; 25–29, 91.4%; 30–39, 92.8%; 40–49, 93.3%; 50–59, 86.8%. Each drawing's height shows its percentage.</p>
+            <div class="age-tip" id="age-tip" role="status" hidden></div>
+          </div>
+          <p class="age-source"><a href="https://doi.org/10.1111/j.1743-6109.2010.02020.x">Herbenick et al. (2010)</a>, Table 3. These percentages describe orgasm at the most recent partnered sexual event among the study's men and women, not heterosexual-only groups or personal predictions.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step" data-scene="age" data-state="intro"><div class="card">
+          <p>Maybe it sorts itself out with time? More practice, more confidence, fewer people pretending to know what they're doing.</p>
+          <p>A national survey checked. It asked <strong>1,931 U.S. adults</strong>, aged 18 to 59, about the last time they had sex with someone: did you orgasm?</p>
+          <p class="fine">New study, different question: this one is about a single event, the most recent one, not how often people usually orgasm. Don't compare these numbers with the ones above.</p>
+        </div></div>
+        <div class="step" data-scene="age" data-state="ages"><div class="card">
+          <p>Five age groups, from 18–24 up to 50–59, women and men side by side. Each drawing is as tall as its percentage.</p>
+          <p>In <strong>every single age group</strong>, more of the men said yes.</p>
+        </div></div>
+        <div class="step" data-scene="age" data-state="bands"><div class="card">
+          <p>In their late twenties, the gap is about <strong>34 points</strong>: 91% of the men, 58% of the women. Among people in their fifties it's about <strong>16</strong>: 87% vs. 71%.</p>
+          <p>Smaller, but still there. Wisdom comes with age. Apparently it only gets you partway.</p>
+          <p class="fine">Herbenick et al. (2010), Table 3: the 2009 National Survey of Sexual Health and Behavior, a weighted national probability sample of adults who'd had partnered sex in the past year. These are different people at different ages, not the same people growing older, and the survey stops at 59. "Men" and "women" include some same-sex encounters.</p>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 6. What happened in bed (side scroll) -->
+    <section class="scrolly" id="scrolly-menu" aria-label="What happened in bed">
+      <div class="graphic">
+        <div class="scene" data-scene="menu">
+          <p class="scene-title">What happened in her last encounter?</p>
+          <div class="chips" id="chips"></div>
+          <div class="menu-out">
+            <div class="big-pct" id="menu-pct">35%</div>
+            <p class="menu-caption" id="menu-caption"></p>
+          </div>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step" data-scene="menu" data-state="vaginal">
+          <p>Back to Frederick's survey. If it isn't age and it isn't anatomy, maybe it's what's on the menu.</p>
+          <p>Straight women whose last encounter was <strong>intercourse and nothing else</strong>: only <strong>35%</strong> usually or always orgasm.</p>
+        </div>
+        <div class="step" data-scene="menu" data-state="full">
+          <p>Now swap in oral sex, hands, and deep kissing: <strong>80%</strong>.</p>
+          <p>Same group of women. Very different evening.</p>
+        </div>
+        <div class="step" data-scene="menu" data-state="play">
+          <p>Try it yourself: tap the menu to build a different evening and see how the number changes.</p>
+          <p class="fine">Frederick et al. (2018), Table 5: what happened in straight women's last encounter, next to how often they usually orgasm. These go together; the survey can't show that one causes the other. Combinations reported by fewer than 20 women aren't shown.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Hands and toys (full width) -->
+    <section class="full" id="toys" aria-labelledby="toys-heading">
+      <div class="prose">
+        <h2 id="toys-heading">Bring a hand. Or a toy.</h2>
+        <p>One thing that keeps showing up on that menu is <em>hands</em>. A national survey of about 2,900 U.S. women asked whether they'd ever touched the clitoris during penetration, either themselves or a partner, with fingers or a toy, to orgasm more often or make sex feel better. Researchers call this <strong>pairing</strong>.</p>
+      </div>
+      <!-- Live version of experiments/processing-pairing-landscape (run-20261109-182938): one row of four,
+           equal drawing size (same bounding-box area, proportions kept); the numbers show the percentages,
+           revealed on hover / keyboard focus (always shown on touch screens). -->
+      <figure class="pairing-land" aria-labelledby="pairing-title">
+        <p class="pairing-title" id="pairing-title">Have you ever used clitoral touch during vaginal penetration to orgasm more often or make sex more pleasurable than penetration alone?</p>
+        <p class="pairing-sub">Share of women who answered yes to each technique. <span class="pairing-hint">Hover over a drawing to see it.</span></p>
+        <div class="pairing-row" id="pairing-row"></div>
+        <figcaption class="pairing-notes">Techniques overlap; percentages cannot be added. Illustration sizes are equal, not scaled to the percentages.<br>Hensel et al. (2021), Table 6 · Weighted U.S. women survey, N = 2,877</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="fine">These are women who had <em>ever</em> done this, and plenty do more than one. The question asked about orgasm <em>or</em> pleasure, so a yes doesn't mean more orgasms. "Self-applied" means her own hand during penetration, not solo sex.</p>
+        <p>So the know-how clearly exists. It just doesn't always make it into the room.</p>
+        <h3 class="sub-head">How long does it take?</h3>
+        <p>It's not just <em>whether</em>, either. It's how long. "Women take forever" is a classic. So: do they?</p>
+        <p>Here's a crowd of 16 people from each group, building toward orgasm. Each line rises in pitch until that person gets there (a dot), or fades out if they don't. Pick who to compare.</p>
+      </div>
+      <figure class="crowd" aria-labelledby="crowd-caption">
+        <div class="crowd-controls">
+          <div class="crowd-line">
+            <label>Compare <select id="crowd-a" aria-label="First group"></select></label>
+            <label>with <select id="crowd-b" aria-label="Second group"></select></label>
+          </div>
+          <div class="crowd-line">
+            <label>Sound <select id="crowd-tone" aria-label="Rising sound"></select></label>
+            <label>Finish <select id="crowd-finish" aria-label="Finish sound"></select></label>
+            <button class="hear" id="crowd-play" type="button">▶ Play</button>
+            <button class="text-button" id="crowd-new" type="button">New crowd</button>
+          </div>
+        </div>
+        <canvas class="crowd-canvas" id="crowd-canvas" role="img" aria-label="Rising lines, one per simulated person, ending when that person reaches orgasm."></canvas>
+        <figcaption id="crowd-caption" class="crowd-readout" aria-live="polite"><span id="crowd-readout"></span></figcaption>
+        <p class="crowd-legend"><span class="crowd-key a">Red lines</span> = first group, <span class="crowd-key b">black lines</span> = second group.</p>
+      </figure>
+      <div class="prose">
+        <p>Same women, very different clocks: about 8 minutes on their own, about 14 with a partner. The men's line is shorter still, but it's timing something narrower.</p>
+        <p class="fine"><strong>Modeled, not measured.</strong> Only averages are published, so each person's time is drawn from a curve fitted around that average (a log-normal), and the spread is an assumption. <span id="crowd-notes"></span> Women's times: Rowland et al. (2018), self-reported, minute values via secondary coverage. The groups mix studies and measures. Sped up: 1 minute = 1 second.</p>
+      </div>
+    </section>
+
+    <!-- 9. Ending (text) -->
+    <section class="full ending" aria-labelledby="ending-heading">
+      <div class="prose">
+        <h2 id="ending-heading">So, about that gap.</h2>
+        <p>None of these studies can tell you <em>why</em>. They're snapshots, mostly of people who chose to answer. But look at what moved the numbers and what didn't.</p>
+        <p>Getting older didn't close the gap. Being a woman didn't explain it. What went along with more orgasms was more of the menu: more hands, more mouths, more of the stuff we don't usually count as the main event.</p>
+        <p>Maybe the gap isn't really about bodies. Maybe it's about what we count as sex.</p>
+        <p>The data can't promise anything. But asking, adding to the menu, and bringing a hand along seems like a pretty fun experiment to run.</p>
+      </div>
+    </section>
+
+    <!-- Credits -->
+    <footer class="credits" aria-labelledby="credits-heading">
+      <div class="prose">
+        <h2 id="credits-heading">Studies used</h2>
+        <ol class="credit-list">
+          <li><strong>Who orgasms, the menu.</strong> Frederick, D. A., St. John, H. K., Garcia, J. R., &amp; Lloyd, E. A. (2018). Differences in orgasm frequency among gay, lesbian, bisexual, and heterosexual men and women in a U.S. national sample. <i>Archives of Sexual Behavior, 47</i>, 273–288. <a href="https://doi.org/10.1007/s10508-017-0939-z">doi.org/10.1007/s10508-017-0939-z</a></li>
+          <li><strong>How long it takes.</strong> Rowland, D. L., Sullivan, S. L., Hevesi, K., &amp; Hevesi, B. (2018). Orgasmic latency and related parameters in women during partnered and masturbatory sex. <i>Journal of Sexual Medicine, 15</i>(10), 1463–1471. <a href="https://doi.org/10.1016/j.jsxm.2018.08.003">doi.org/10.1016/j.jsxm.2018.08.003</a> (minute values via secondary coverage)</li>
+          <li><strong>How long it takes (model inputs).</strong> Bhat, G. S., &amp; Shastry, A. (2020). Time to orgasm in women in a monogamous stable heterosexual relationship. <i>Journal of Sexual Medicine, 17</i>, 749–760 (spread of women's times; via the abstract). Men's 5.4 minutes: a stopwatch study of penetration to ejaculation, as summarized by PsyPost (secondary).</li>
+          <li><strong>Age.</strong> Herbenick, D., Reece, M., Schick, V., Sanders, S. A., Dodge, B., &amp; Fortenberry, J. D. (2010). An event-level analysis of the sexual characteristics and composition among adults ages 18 to 59: Results from a national probability sample in the United States. <i>Journal of Sexual Medicine, 7</i>(suppl. 5), 346–361. <a href="https://doi.org/10.1111/j.1743-6109.2010.02020.x">doi.org/10.1111/j.1743-6109.2010.02020.x</a></li>
+          <li><strong>Hands and toys.</strong> Hensel, D. J., von Hippel, C. D., Lapage, C. C., &amp; Perkins, R. H. (2021). Women's techniques for making vaginal penetration more pleasurable: Results from a nationally representative study of adult women in the United States. <i>PLOS ONE, 16</i>(4), e0249242. <a href="https://doi.org/10.1371/journal.pone.0249242">doi.org/10.1371/journal.pone.0249242</a></li>
+        </ol>
+        <p class="fine">Sounds: CC0 recordings from Freesound by Sadiquecat (woo, yay), Reitanna (yay, grunt), kanyonwyvern (aww), monsterthing (sigh) and salemaudio (grunt); everything else is synthesized in the browser. Drawings by Julia.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

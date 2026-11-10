@@ -1,0 +1,12 @@
+measure,context,value,unit,denominator_n,source_location,notes
+orgasm in most recent event,all hookups,21,percent,6881,Table 1,Table proportion .21 multiplied by 100; overlapping analytic samples
+orgasm in most recent event,hookups with intercourse,42,percent,2748,Table 1,Table proportion .42 multiplied by 100; subset of all hookups
+orgasm in most recent event,all relationship sexual events,67,percent,6591,Table 1,Table proportion .67 multiplied by 100; overlapping analytic samples
+orgasm in most recent event,relationship events with intercourse,74,percent,5242,Table 1,Table proportion .74 multiplied by 100; subset of all relationship events
+enjoyed event very much,all hookups,50,percent,6881,Table 1,Table proportion .50 multiplied by 100; distinct from orgasm occurrence
+enjoyed event very much,hookups with intercourse,59,percent,2748,Table 1,Table proportion .59 multiplied by 100; distinct from orgasm occurrence
+enjoyed event very much,all relationship sexual events,81,percent,6591,Table 1,Table proportion .81 multiplied by 100; distinct from orgasm occurrence
+enjoyed event very much,relationship events with intercourse,83,percent,5242,Table 1,Table proportion .83 multiplied by 100; distinct from orgasm occurrence
+orgasm in most recent event,first hookup with this partner,11,percent,,Figure 1 and results text,Figure subgroup denominator not verified
+orgasm in most recent event,second or third hookup with this partner,16,percent,,Figure 1 and results text,Figure subgroup denominator not verified
+orgasm in most recent event,higher-order hookup with this partner,34,percent,,Figure 1 and results text,Figure subgroup denominator not verified

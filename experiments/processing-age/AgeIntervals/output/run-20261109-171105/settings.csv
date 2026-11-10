@@ -1,0 +1,11 @@
+parameter,value
+canvas_width,1600
+canvas_height,900
+paper_color,#FFFFFFFF
+ink_color,#FFCF0B2E
+font_name,Georgia
+scale_min,-30.0
+scale_max,0.0
+interval_weight,2.0
+estimate_diameter,20.0
+show_intervals,true

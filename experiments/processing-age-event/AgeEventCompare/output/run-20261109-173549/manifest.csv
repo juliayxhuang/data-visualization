@@ -1,0 +1,3 @@
+variant,source_csv,source_url,illustrations,red,paper,axis_min,axis_max
+paired_bars,../../../data/raw/herbenick-2010-age-event-orgasm.csv,https://doi.org/10.1111/j.1743-6109.2010.02020.x,none,#CF0B2E,#FFFFFF,0,100
+illustration_markers,../../../data/raw/herbenick-2010-age-event-orgasm.csv,https://doi.org/10.1111/j.1743-6109.2010.02020.x,story/assets/female.png + story/assets/male.png,#CF0B2E,#FFFFFF,0,100

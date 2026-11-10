@@ -1,0 +1,5 @@
+technique,weighted_percent,table_denominator_n,art_file,trimmed_width_px,trimmed_height_px,drawn_width_logical_px,drawn_height_logical_px,drawn_bbox_area_logical_px2,area_per_percentage_point,source_csv,source_doi
+Solo Pairing with a finger,30.9,2877,IMG_1744.PNG,514,1341,74.256,193.730,14385.587,465.55298,../../../data/raw/hensel-2021-pairing.csv,10.1371/journal.pone.0249242
+Solo Pairing with a sex toy,20.1,2877,IMG_1731.PNG,1877,1523,107.390,87.137,9357.615,465.55298,../../../data/raw/hensel-2021-pairing.csv,10.1371/journal.pone.0249242
+Partner Pairing with a finger,43.1,2877,IMG_1744.PNG,514,1341,87.698,228.800,20065.332,465.55298,../../../data/raw/hensel-2021-pairing.csv,10.1371/journal.pone.0249242
+Partner Pairing with a sex toy,17.5,2877,IMG_1732.PNG,1489,1447,91.562,88.980,8147.178,465.55298,../../../data/raw/hensel-2021-pairing.csv,10.1371/journal.pone.0249242

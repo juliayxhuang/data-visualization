@@ -1,0 +1,11 @@
+# Anderson et al. (online 2025; issue 2026)
+
+**Citation and access.** Joel R. Anderson, Jordan D. X. Hinton, Alena Bondarchuk-McLaughlin, Scarlet Rosa, Kian Jin Tan, and Lily Moor, “Countering the Monogamy-Superiority Myth: A Meta-Analysis of the Differences in Relationship Satisfaction and Sexual Satisfaction as a Function of Relationship Orientation,” *The Journal of Sex Research* 63(1), 130–142 (2026), [DOI 10.1080/00224499.2025.2462988](https://doi.org/10.1080/00224499.2025.2462988). Published online March 24, 2025; open access publisher PDF consulted 2026-11-02.
+
+**Question and design.** Meta-analysis comparing relationship satisfaction and sexual satisfaction in monogamous and consensually non-monogamous groups. The authors searched multiple databases and sought unpublished data. The paper includes 35 suitable studies and 24,489 participants in total, with separate outcome sets.
+
+**Measures and groups.** Outcomes are satisfaction, not orgasm rate. Relationship satisfaction concerns relationship appraisal; sexual satisfaction concerns the sex-life/experience appraisal. Positive Hedges’ g is coded toward higher satisfaction in non-monogamous groups; negative toward higher satisfaction in monogamous groups. Agreement types and sample orientation were examined as moderators. The underlying studies differ in operational definitions and measures.
+
+**Observed findings.** The abstract reports relationship satisfaction: k = 29, g = −0.05, 95% CI [−0.20, 0.10], p = .496; sexual satisfaction: k = 17, g = 0.06, 95% CI [−0.07, 0.18], p = .393. These are transcribed to `data/raw/anderson-2025-online.csv`. The total N belongs to the review overall, not either individual outcome set. The confidence intervals include zero; this is a null overall finding, not proof of equivalence for every subgroup.
+
+**Limits.** The paper notes that most included studies recruited through social networks or online snowball sampling, with potential self-selection and self-report bias. Definitions of non-monogamy and partner arrangements vary. It is a synthesis of observational reports and cannot establish that relationship structure causes satisfaction. Do not convert Hedges’ g to percentages. Review Figure 1, the methods, and supplementary material before using subgroup estimates.

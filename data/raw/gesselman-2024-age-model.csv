@@ -1,0 +1,6 @@
+age_group,age_min,age_max,model_term,coefficient_b,ci_lower_95,ci_upper_95,outcome_scale,source_location,notes
+18-24,18,24,gender women vs men,-20.52,-23.96,-17.09,0-100 self-estimated orgasm rate during sexual intercourse,Table 3,Age-specific adjusted regression coefficient; not an observed age-group rate
+25-34,25,34,gender women vs men,-25.29,-28.18,-22.39,0-100 self-estimated orgasm rate during sexual intercourse,Table 3,Age-specific adjusted regression coefficient; not an observed age-group rate
+35-49,35,49,gender women vs men,-24.61,-26.31,-20.91,0-100 self-estimated orgasm rate during sexual intercourse,Table 3,Published confidence interval appears asymmetric around coefficient; reproduce as printed and verify before drawing uncertainty
+50-64,50,64,gender women vs men,-25.33,-28.49,-22.18,0-100 self-estimated orgasm rate during sexual intercourse,Table 3,Age-specific adjusted regression coefficient; not an observed age-group rate
+65+,65,,gender women vs men,-22.44,-27.93,-16.95,0-100 self-estimated orgasm rate during sexual intercourse,Table 3,Age-specific adjusted regression coefficient; not an observed age-group rate

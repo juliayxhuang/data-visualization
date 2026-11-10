@@ -1,0 +1,96 @@
+{
+ "_note": "Subset of the orgasm-gap sound project's manifest (yay, sad, woo, grunt). All CC0 from Freesound; see each entry's url. 'voice' m/f decides which group a clip can voice. One clip per gender per sound (the student's main pick); extras are not used.",
+ "yay": [
+  {
+   "file": "yay/801292_sadiquecat_joyful-yay.mp3",
+   "title": "Joyful - YAY",
+   "author": "Sadiquecat",
+   "license": "CC0",
+   "url": "https://freesound.org/people/Sadiquecat/sounds/801292/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "m",
+   "voice_basis": "picked by the student in audition.html, 2026-11-09 as the men's",
+   "whole": true,
+   "gain_db": 2
+  },
+  {
+   "file": "yay/241487_reitanna_yay.mp3",
+   "title": "yay",
+   "author": "Reitanna",
+   "license": "CC0",
+   "url": "https://freesound.org/people/Reitanna/sounds/241487/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "f",
+   "voice_basis": "picked by the student in audition.html, 2026-11-09 as the women's",
+   "whole": true,
+   "gain_db": 2.5
+  }
+ ],
+ "sad": [
+  {
+   "file": "sad/727358_kanyonwyvern_disappointed-aww.mp3",
+   "title": "disappointed aww",
+   "author": "kanyonwyvern",
+   "license": "CC0",
+   "url": "https://freesound.org/people/kanyonwyvern/sounds/727358/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "m",
+   "voice_basis": "picked by the student in audition.html, 2026-11-09 as the men's",
+   "whole": true
+  },
+  {
+   "file": "sad/663651_monsterthing_woman-exasperated-sigh.mp3",
+   "title": "Woman Exasperated Sigh, Breathe Out",
+   "author": "monsterthing",
+   "license": "CC0",
+   "url": "https://freesound.org/people/monsterthing/sounds/663651/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "f",
+   "voice_basis": "title says woman; picked by the student in audition.html, 2026-11-09",
+   "whole": true,
+   "gain_db": 2.5
+  }
+ ],
+ "woo": [
+  {
+   "file": "woo/801291_sadiquecat_joyful-wouhouh.mp3",
+   "title": "Joyful - Wouhouh",
+   "author": "Sadiquecat",
+   "license": "CC0",
+   "url": "https://freesound.org/people/Sadiquecat/sounds/801291/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "m",
+   "voice_basis": "picked by the student in audition.html, 2026-11-09 as the men's",
+   "clip": [
+    0
+   ]
+  }
+ ],
+ "grunt": [
+  {
+   "file": "grunt/803168_salemaudio_soft-male-effort-groans.mp3",
+   "title": "Soft Male Vocal, Short Pained/Exertion Groans",
+   "author": "salemaudio",
+   "license": "CC0",
+   "url": "https://freesound.org/people/salemaudio/sounds/803168/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "m",
+   "voice_basis": "title says male; measured median 289 Hz",
+   "clip": [
+    4
+   ],
+   "picked": "picked by the student in audition.html, 2026-11-09"
+  },
+  {
+   "file": "grunt/242623_reitanna_grunt.mp3",
+   "title": "grunt",
+   "author": "Reitanna",
+   "license": "CC0",
+   "url": "https://freesound.org/people/Reitanna/sounds/242623/",
+   "format": "Freesound HQ preview MP3",
+   "voice": "f",
+   "voice_basis": "picked by the student in audition.html, 2026-11-09 as the women's",
+   "whole": true
+  }
+ ]
+}

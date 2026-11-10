@@ -1,0 +1,15 @@
+filename,arrangement,scope,group,percent,denominator_n,source_file,source_doi
+all-groups-rows.png,straight rows,all six,all six,,,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+all-groups-rings.png,concentric rings,all six,all six,,,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+heterosexual-men-rows.png,straight row,single group,heterosexual men,95,26032,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+heterosexual-men-ring.png,circular row,single group,heterosexual men,95,26032,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+gay-men-rows.png,straight row,single group,gay men,89,452,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+gay-men-ring.png,circular row,single group,gay men,89,452,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+bisexual-men-rows.png,straight row,single group,bisexual men,88,550,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+bisexual-men-ring.png,circular row,single group,bisexual men,88,550,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+lesbian-women-rows.png,straight row,single group,lesbian women,86,340,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+lesbian-women-ring.png,circular row,single group,lesbian women,86,340,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+bisexual-women-rows.png,straight row,single group,bisexual women,66,1112,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+bisexual-women-ring.png,circular row,single group,bisexual women,66,1112,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+heterosexual-women-rows.png,straight row,single group,heterosexual women,65,24102,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z
+heterosexual-women-ring.png,circular row,single group,heterosexual women,65,24102,../../../data/raw/frederick-2018.csv,10.1007/s10508-017-0939-z

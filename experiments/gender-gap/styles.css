@@ -1,0 +1,164 @@
+:root {
+  /* Pink sampled from the screenshot; red matches the supplied icon assets. */
+  --background: rgb(250 223 233);
+  --foreground: rgb(202 20 47);
+  /* Increase this to make the reveal take more scrolling distance. */
+  --reveal-distance: 180vh;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.scroll-track {
+  height: calc(100vh + var(--reveal-distance));
+}
+
+.scene {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.composition {
+  width: 1008px;
+  max-width: calc(100% - 24px);
+  transform: translateY(-35px);
+}
+
+h1 {
+  margin: 0 0 60px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.groups {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 68px;
+}
+
+.group {
+  --icon-width: 19px;
+  display: grid;
+  grid-template-columns: 60px calc(20 * var(--icon-width));
+  align-items: start;
+  column-gap: 30px;
+  width: max-content;
+}
+
+.group-symbol {
+  position: relative;
+  font-size: 54px;
+  line-height: 1;
+  text-align: center;
+}
+
+.symbol-tooltip {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% + 40px);
+  left: calc(50% + 6px);
+  transform: translateY(-50%);
+  padding: 10px 12px;
+  color: white;
+  background: var(--foreground);
+  font-size: 22px;
+  line-height: 1.15;
+  white-space: nowrap;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.group-symbol:hover .symbol-tooltip,
+.group-symbol:focus-visible .symbol-tooltip {
+  visibility: visible;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(20, var(--icon-width));
+  grid-auto-rows: calc(var(--icon-width) * 36 / 19);
+  row-gap: 8px;
+}
+
+.person-icon {
+  display: block;
+  width: var(--icon-width);
+  height: calc(var(--icon-width) * 36 / 19);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.group-men .person-icon {
+  background-image: url("assets/male.png");
+}
+
+.group-women .person-icon {
+  background-image: url("assets/fem.png");
+}
+
+.person-icon.is-visible {
+  opacity: 1;
+}
+
+footer {
+  padding: 16px 20px 48px;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 1100px) {
+  .group {
+    --icon-width: min(19px, calc((100vw - 188px) / 40));
+    grid-template-columns: 40px calc(20 * var(--icon-width));
+    column-gap: 8px;
+  }
+
+  .group-symbol {
+    font-size: 36px;
+  }
+
+  .people {
+    row-gap: 5px;
+  }
+}
+
+@media (max-width: 667px) {
+  .composition {
+    width: 520px;
+    transform: none;
+  }
+
+  .groups {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .group {
+    --icon-width: min(19px, calc((100vw - 72px) / 20));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .person-icon {
+    transition: none;
+  }
+}
