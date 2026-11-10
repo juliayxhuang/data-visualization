@@ -1,10 +1,11 @@
-/* The Big O — combined draft. Red on white, Georgia (temporary; Gramercy trial can't be deployed).
+/* The Big O — combined draft. Red on white. Font: ABC Gramercy Trial, used only if it is installed on the viewing computer
+   (no font files are embedded or committed: the trial license does not allow web use); everyone else sees Georgia.
    Groups are told apart with opacity, not hue: --o-* below. */
 :root {
   color-scheme: light;
   --red: #cf0b2e;
   --red-rgb: 207, 11, 46;
-  --serif: Georgia, "Times New Roman", serif;
+  --serif: "ABC Gramercy Trial", Georgia, "Times New Roman", serif;
   --o-dim: .22;      /* groups not in focus */
   --o-soft: .55;     /* secondary marks */
 }
@@ -144,7 +145,7 @@ strong { font-weight: 700; }
 .chip.on { background: var(--red); color: #fff; }
 .menu-out { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
 .big-pct { font-size: clamp(4rem, 8vw, 7rem); line-height: 1; }
-.menu-caption { max-width: 18rem; margin: 0; font-size: 1.05rem; line-height: 1.35; }
+.menu-caption { max-width: 30rem; margin: 0; font-size: 1.05rem; line-height: 1.35; }
 .cresc-lanes { display: block; width: 100%; max-width: 34rem; margin-top: 1.4rem; color: var(--red); }
 .race { max-width: 52rem; margin: 2.5rem auto; padding-inline: max(1rem, 2vw); }
 .race-lanes { display: block; width: 100%; color: var(--red); }
@@ -332,3 +333,61 @@ html { scroll-snap-type: y proximity; }
 .crowd-line { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
 /* wider pairing question */
 .pairing-title { max-width: 66rem; }
+
+/* pairing question: left-aligned and full figure width, more room above it */
+.pairing-land { margin-top: 7rem; }
+.pairing-title, .pairing-sub { text-align: left; max-width: none; margin-left: 0; margin-right: 0; }
+/* less space above "Bring a hand (or a toy)" */
+#toys { padding-top: 4vh; }
+/* crescendo summary and legend: no bold, colours only */
+.crowd-key.a, .crowd-key.b { font-weight: 400; }
+.crowd-readout strong { font-weight: 400; }
+
+/* pairing: percentage centred over the drawing, revealed on hover/focus */
+.pair-art { position: relative; }
+.pair-art .pair-pct {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -40%); margin: 0;
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem); line-height: 1; white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity .3s ease, transform .3s ease;
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 18px #fff;   /* white halo so it reads over the linework */
+}
+.pair-item:hover .pair-art .pair-pct, .pair-item:focus-visible .pair-art .pair-pct { opacity: 1; transform: translate(-50%, -50%); }
+@media (hover: none) { .pair-art .pair-pct { opacity: 1; transform: translate(-50%, -50%); } }
+
+/* even less space above "Bring a hand (or a toy)" */
+#scrolly-menu { padding-bottom: 0; }
+#scrolly-menu .step:last-child { min-height: 70vh; }
+#toys { padding-top: 0; }
+
+/* crescendo: full-width chart, text cards scroll over it on the right */
+.crowd-scene { justify-content: flex-start; padding-top: 4.5rem; }
+.crowd-scene .crowd { max-width: none; width: 100%; margin: 0; padding: 0; }
+.crowd-scene .crowd-canvas { height: calc(100vh - 17rem); min-height: 14rem; }
+#scrolly-time .card { max-width: 26rem; }
+#scrolly-time .card .sub-head { margin-top: 0; }
+#scrolly-time .step { padding-top: 22vh; }
+
+/* pairing hover: only the number appears; drawings keep their size and opacity */
+.pair-item:hover .pair-art svg, .pair-item:focus-visible .pair-art svg { transform: none; }
+.pairing-row:hover .pair-item:not(:hover) { opacity: 1; }
+
+/* all dropdowns: custom arrow with room on its right */
+select {
+  -webkit-appearance: none; appearance: none;
+  padding-right: 2.4em !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23cf0b2e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right .9em center; background-size: .75em auto;
+}
+/* keep the arrow even where a dropdown's own rule sets a white background */
+select { background-color: #fff !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23cf0b2e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-position: right .9em center !important; background-size: .75em auto !important; }
+
+/* more room between the pairing intro paragraph and the question */
+.pairing-land { margin-top: 10rem; }
+
+
+/* no rule above "Studies used" */
+.credits { border-top: 0; }
+
+/* more room between the question and the Woman/Man and orientation options */
+.identity-question h2 { margin-bottom: 6.5rem; }
+@media (max-width: 600px) { .identity-question h2 { margin-bottom: 3rem; } }

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Big O: a playful, research-grounded look at the orgasm gap. Combined draft.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="combined.css?v=2">
-  <script src="combined.js?v=2" defer></script>
+  <link rel="stylesheet" href="combined.css?v=11">
+  <script src="combined.js?v=9" defer></script>
   <title>The Big O — combined draft</title>
 </head>
 <!--
@@ -264,30 +264,44 @@
       </figure>
       <div class="prose">
         <p class="fine">These are women who had <em>ever</em> done this, and plenty do more than one. The question asked about orgasm <em>or</em> pleasure, so a yes doesn't mean more orgasms. "Self-applied" means her own hand during penetration, not solo sex.</p>
-        <h3 class="sub-head">How long does it take?</h3>
-        <p>There's also the old complaint that women "take forever." One study asked 2,304 women in the U.S. and Hungary how long it usually takes them.</p>
-        <p>Below are 16 simulated people from each group. Each line rises in pitch until that person reaches orgasm (a dot), or fades out if they don't. Use the menus to pick the groups.</p>
       </div>
-      <figure class="crowd" aria-labelledby="crowd-caption">
-        <div class="crowd-controls">
-          <div class="crowd-line">
-            <label>Compare <select id="crowd-a" aria-label="First group"></select></label>
-            <label>with <select id="crowd-b" aria-label="Second group"></select></label>
-          </div>
-          <div class="crowd-line">
-            <label>Sound <select id="crowd-tone" aria-label="Rising sound"></select></label>
-            <label>Finish <select id="crowd-finish" aria-label="Finish sound"></select></label>
-            <button class="hear" id="crowd-play" type="button">▶ Play</button>
-            <button class="text-button" id="crowd-new" type="button">New crowd</button>
-          </div>
+    </section>
+
+    <!-- 8. How long does it take? Full-width crescendo; text cards scroll over it on the side. -->
+    <section class="scrolly overlay" id="scrolly-time" aria-label="How long does it take?">
+      <div class="graphic">
+        <div class="scene crowd-scene" data-scene="crowd">
+          <figure class="crowd" aria-labelledby="crowd-caption">
+            <div class="crowd-controls">
+              <div class="crowd-line">
+                <label>Compare <select id="crowd-a" aria-label="First group"></select></label>
+                <label>with <select id="crowd-b" aria-label="Second group"></select></label>
+              </div>
+              <div class="crowd-line">
+                <label>Sound <select id="crowd-tone" aria-label="Rising sound"></select></label>
+                <label>Finish <select id="crowd-finish" aria-label="Finish sound"></select></label>
+                <button class="hear" id="crowd-play" type="button">▶ Play</button>
+                <button class="text-button" id="crowd-new" type="button">New crowd</button>
+              </div>
+            </div>
+            <canvas class="crowd-canvas" id="crowd-canvas" role="img" aria-label="Rising lines, one per simulated person, ending when that person reaches orgasm."></canvas>
+            <figcaption id="crowd-caption" class="crowd-readout" aria-live="polite"><span id="crowd-readout"></span></figcaption>
+            <p class="crowd-legend"><span class="crowd-key a">Red lines</span> = first group, <span class="crowd-key b">black lines</span> = second group.</p>
+          </figure>
         </div>
-        <canvas class="crowd-canvas" id="crowd-canvas" role="img" aria-label="Rising lines, one per simulated person, ending when that person reaches orgasm."></canvas>
-        <figcaption id="crowd-caption" class="crowd-readout" aria-live="polite"><span id="crowd-readout"></span></figcaption>
-        <p class="crowd-legend"><span class="crowd-key a">Red lines</span> = first group, <span class="crowd-key b">black lines</span> = second group.</p>
-      </figure>
-      <div class="prose">
-        <p>The same women reported about 8 minutes on their own and about 14 with a partner. The men's times are shorter, but they come from a different study that only timed penetration to ejaculation.</p>
-        <p class="fine">These times are modeled. Only averages are published, so each person's time is drawn from a curve fitted around that average (a log-normal), and the spread is an assumption. <span id="crowd-notes"></span> Women's times: Rowland et al. (2018), self-reported, minute values via secondary coverage. The groups mix studies and measures. Sped up: 1 minute = 1 second.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-scene="crowd" data-state="intro"><div class="card">
+          <h3 class="sub-head">How long does it take?</h3>
+          <p>There's also the old complaint that women "take forever." One study asked 2,304 women in the U.S. and Hungary how long it usually takes them.</p>
+        </div></div>
+        <div class="step" data-scene="crowd" data-state="how"><div class="card">
+          <p>These are 16 simulated people from each group. Each line rises in pitch until that person reaches orgasm (a dot), or fades out if they don't. Use the menus to pick the groups, then press play.</p>
+        </div></div>
+        <div class="step" data-scene="crowd" data-state="result"><div class="card">
+          <p>The same women reported about 8 minutes on their own and about 14 with a partner. The men's times are shorter, but they come from a different study that only timed penetration to ejaculation.</p>
+          <p class="fine">These times are modeled. Only averages are published, so each person's time is drawn from a curve fitted around that average (a log-normal), and the spread is an assumption. <span id="crowd-notes"></span> Women's times: Rowland et al. (2018), self-reported, minute values via secondary coverage. The groups mix studies and measures. Sped up: 1 minute = 1 second.</p>
+        </div></div>
       </div>
     </section>
 

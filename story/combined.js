@@ -530,7 +530,7 @@ function drawCrowd() {
   const maxMin = Math.max(10, Math.ceil(crowd.reduce((m, x) => Math.max(m, x.T), 0) / 5) * 5);
   const X = m => padL + (m / maxMin) * (Wc - padL - padR), Y = f => Hc - padB - f * (Hc - padB - padT);
   const nowMin = crowdRun ? (ctx.currentTime - crowdRun.t0) : null;
-  c.font = '14px Georgia, serif'; c.textBaseline = 'alphabetic';
+  c.font = '14px "ABC Gramercy Trial", Georgia, serif'; c.textBaseline = 'alphabetic';
   for (let m = 0; m <= maxMin; m += 5) {
     c.strokeStyle = 'rgba(207,11,46,.12)'; c.lineWidth = 1; c.beginPath(); c.moveTo(X(m), padT); c.lineTo(X(m), Hc - padB); c.stroke();
     c.fillStyle = '#cf0b2e'; c.fillText(m === 0 ? '0 min (modeled)' : String(m), X(m) - (m === 0 ? 2 : 6), Hc - 10);
@@ -670,8 +670,9 @@ function buildPairing() {
     const [x, y, w, h] = p.box, rel = Math.sqrt(A / asp(p));
     const cell = document.createElement('div'); cell.className = 'pair-item'; cell.tabIndex = 0;
     cell.setAttribute('aria-label', `${p.label}: ${p.pct}% said yes`);
-    cell.innerHTML = `<div class="pair-art"><svg viewBox="${x} ${y} ${w} ${h}" style="height:calc(var(--pair-h) * ${rel.toFixed(4)})" aria-hidden="true"><image href="${p.file}" width="2732" height="2048" filter="url(#red-ink)"/></svg></div>
-      <div class="pair-label">${p.label}</div><div class="pair-pct" aria-hidden="true">${p.pct}%</div>`;
+    // the percentage sits centred over the drawing and fades in on hover/focus
+    cell.innerHTML = `<div class="pair-art"><svg viewBox="${x} ${y} ${w} ${h}" style="height:calc(var(--pair-h) * ${rel.toFixed(4)})" aria-hidden="true"><image href="${p.file}" width="2732" height="2048" filter="url(#red-ink)"/></svg><div class="pair-pct" aria-hidden="true">${p.pct}%</div></div>
+      <div class="pair-label">${p.label}</div>`;
     row.append(cell);
   });
 }
@@ -697,6 +698,7 @@ const SCENES = {
   rings: st => updateRings(st),
   nights: () => drawNights(),
   loud: () => {},
+  crowd: () => drawCrowd(),
   age: st => updateAge(st),
   menu: st => {
     if (st === 'vaginal') menu = { v: 1, o: 0, h: 0, k: 0 };
