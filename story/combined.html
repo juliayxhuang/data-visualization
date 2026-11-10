@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Big O: a playful, research-grounded look at the orgasm gap. Combined draft.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="combined.css">
-  <script src="combined.js" defer></script>
+  <link rel="stylesheet" href="combined.css?v=2">
+  <script src="combined.js?v=2" defer></script>
   <title>The Big O — combined draft</title>
 </head>
 <!--
@@ -39,19 +39,18 @@
     <!-- 2. Intro -->
     <section class="introduction" aria-label="Introduction">
       <div class="prose">
-        <p>Everyone talks about sex. Hardly anyone talks about how it actually <em>ends</em>.</p>
-        <p>Pleasure is private and a little hard to put into words. It can be shared, or not. It can arrive right on time, show up late, or never turn up at all. We tend to assume it just happens, and that it happens the same way for everyone.</p>
-        <p>Researchers have tried to pin it down anyway, by asking thousands of people very personal questions and turning the answers into numbers. The numbers can't tell the whole story, but they're pretty good at starting one.</p>
+        <p>Pleasure is private and hard to put into words. We mostly assume it just happens during sex, and that it happens the same way for everyone.</p>
+        <p>Researchers have tested that assumption by asking thousands of people very personal questions and turning the answers into percentages. The percentages leave plenty out, but they're a good place to start.</p>
         <p>So let's start with you.</p>
       </div>
     </section>
 
     <!-- 3. Pick a group -->
     <aside class="category-context prose" aria-label="About the study categories">
-      <p class="study-limit">*This part uses the groups reported in one study, which is not a complete list of identities. The results describe the people who answered the survey; they don't predict your experience.</p>
+      <p class="study-limit">*This part uses the six groups reported in one study. That isn't a complete list of identities, and the results describe the people who answered the survey, not what you will experience.</p>
       <details class="study-details">
         <summary>Why are the choices so limited?</summary>
-        <p><a href="https://doi.org/10.1007/s10508-017-0939-z">Frederick et al. (2018)</a> reported results for six groups: heterosexual, lesbian, and bisexual women, and heterosexual, gay, and bisexual men. The paper only reports men and women. It doesn't say whether the survey asked about gender or sex, doesn't mention trans or nonbinary people, and didn't ask about the partner's gender. Anyone outside these six groups isn't in the data, which is a gap of its own.</p>
+        <p><a href="https://doi.org/10.1007/s10508-017-0939-z">Frederick et al. (2018)</a> reported results for six groups: heterosexual, lesbian, and bisexual women, and heterosexual, gay, and bisexual men. The paper only reports men and women. It doesn't say whether the survey asked about gender or sex, doesn't mention trans or nonbinary people, and didn't ask about the partner's gender. Anyone outside these six groups isn't in the data.</p>
       </details>
     </aside>
 
@@ -125,7 +124,7 @@
           <button class="text-button" id="change-answer" type="button">Change answer</button>
         </div>
       </div>
-      <p class="result-next">Hold on to that number. Let's see who it's sitting next to.</p>
+      <p class="result-next">Keep that number in mind. Next, the other five groups.</p>
     </section>
 
     <!-- 4. Everyone else (side scroll) -->
@@ -158,8 +157,8 @@
         </div>
         <div class="step" data-scene="rings" data-state="straight">
           <p>Start with the two biggest groups. <strong>95%</strong> of straight men said they usually or always orgasm when they're intimate with someone. For straight women, it's <strong>65%</strong>.</p>
-          <p>That 30-point difference has a name: <strong>the orgasm gap</strong>.</p>
-          <p class="fine">Frederick et al. (2018): 52,588 adults in relationships who answered an online survey on the NBC News website. People chose to take part, so it's a big sample, not a perfectly representative one.</p>
+          <p>Researchers call that 30-point difference <strong>the orgasm gap</strong>.</p>
+          <p class="fine">Frederick et al. (2018): 52,588 adults in relationships who answered an online survey on the NBC News website. The sample is big, but people chose to take part, so it doesn't represent everyone.</p>
         </div>
         <div class="step" data-scene="nights" data-state="show">
           <p>Picture twenty nights for a straight man and a straight woman. He gets there on <strong>19</strong> of them. She gets there on <strong>13</strong>.</p>
@@ -169,17 +168,17 @@
           <p class="fine">Not real couples: the survey didn't pair people up or ask who their partners were. Each group's percentage becomes nights out of 20 (rounded to the nearest 5%), and the two are matched at random each time you play.</p>
         </div>
         <div class="step" data-scene="rings" data-state="lesbian">
-          <p>The usual explanation is that women's bodies are just… complicated. A mystery. Some assembly required.</p>
+          <p>A common explanation is that women's bodies are harder to figure out, as if they come with complicated assembly instructions.</p>
           <p>But, as you may have found, the same survey found something that doesn't fit. Among the lesbian women who took part, <strong>86%</strong> said they usually or always orgasm, compared with <strong>65%</strong> of the straight women.</p>
-          <p>Women in both groups. Very different numbers.</p>
+          <p>Both groups are women, and their numbers are 21 points apart.</p>
         </div>
         <div class="step" data-scene="rings" data-state="bisexual">
           <p>And the bisexual women in the study? <strong>66%</strong>, almost exactly the same as the straight women, and 20 points below the lesbian women.</p>
-          <p>So in this survey, at least, the gap doesn't line up neatly with "being a woman."</p>
-          <p class="fine">The survey didn't ask who people's partners were, so orientation is only a rough stand-in for who was in bed. These are the people who answered this survey, not all lesbian or bisexual women.</p>
+          <p>So in this survey, being a woman doesn't explain the gap on its own.</p>
+          <p class="fine">The survey didn't ask who people's partners were, so orientation is only a rough stand-in for who was in bed. The numbers describe the people who answered this survey, not lesbian or bisexual women in general.</p>
         </div>
         <div class="step" data-scene="loud" data-state="all">
-          <p>Here are all six as sound. Louder means more people in that group usually or always orgasm, and each group gets its own instrument. Don't like your band? Swap instruments with the menus.</p>
+          <p>Here are all six groups as sound. The louder the instrument, the more people in that group usually or always orgasm. You can swap instruments with the menus.</p>
           <p><button class="hear" id="hear-loud-seq" type="button">▶ One by one</button> <button class="hear" id="hear-loud-all" type="button">▶ All together</button></p>
           <p class="fine">The volume differences are exaggerated 2× so ears can catch them (loudness follows the percentage squared). The bars are exact. Each group keeps its own note, men's groups lower; picking an instrument another group has swaps the two.</p>
         </div>
@@ -205,17 +204,17 @@
       </div>
       <div class="steps">
         <div class="step" data-scene="age" data-state="intro"><div class="card">
-          <p>Maybe it sorts itself out with time? More practice, more confidence, fewer people pretending to know what they're doing.</p>
-          <p>A national survey checked. It asked <strong>1,931 U.S. adults</strong>, aged 18 to 59, about the last time they had sex with someone: did you orgasm?</p>
-          <p class="fine">New study, different question: this one is about a single event, the most recent one, not how often people usually orgasm. Don't compare these numbers with the ones above.</p>
+          <p>Maybe the gap disappears with age. You'd expect people to know their bodies, their preferences and their partners better over time.</p>
+          <p>A 2009 national survey of <strong>1,931 U.S. adults</strong> aged 18 to 59 asked about the last time they had sex with someone: did you orgasm?</p>
+          <p class="fine">This is a different question from the earlier one. It asks about a single event, the most recent, not how often people usually orgasm, so don't compare these numbers with the ones above.</p>
         </div></div>
         <div class="step" data-scene="age" data-state="ages"><div class="card">
           <p>Five age groups, from 18–24 up to 50–59, women and men side by side. Each drawing is as tall as its percentage.</p>
-          <p>In <strong>every single age group</strong>, more of the men said yes.</p>
+          <p>In <strong>all five age groups</strong>, more men than women said yes.</p>
         </div></div>
         <div class="step" data-scene="age" data-state="bands"><div class="card">
           <p>In their late twenties, the gap is about <strong>34 points</strong>: 91% of the men, 58% of the women. Among people in their fifties it's about <strong>16</strong>: 87% vs. 71%.</p>
-          <p>Smaller, but still there. Wisdom comes with age. Apparently it only gets you partway.</p>
+          <p>Age seems to help a little, but in this survey it never closes the gap.</p>
           <p class="fine">Herbenick et al. (2010), Table 3: the 2009 National Survey of Sexual Health and Behavior, a weighted national probability sample of adults who'd had partnered sex in the past year. These are different people at different ages, not the same people growing older, and the survey stops at 59. "Men" and "women" include some same-sex encounters.</p>
         </div></div>
       </div>
@@ -235,12 +234,11 @@
       </div>
       <div class="steps">
         <div class="step" data-scene="menu" data-state="vaginal">
-          <p>Back to Frederick's survey. If it isn't age and it isn't anatomy, maybe it's what's on the menu.</p>
+          <p>Back to Frederick's survey, which also asked what happened during people's last encounter.</p>
           <p>Straight women whose last encounter was <strong>intercourse and nothing else</strong>: only <strong>35%</strong> usually or always orgasm.</p>
         </div>
         <div class="step" data-scene="menu" data-state="full">
           <p>Now swap in oral sex, hands, and deep kissing: <strong>80%</strong>.</p>
-          <p>Same group of women. Very different evening.</p>
         </div>
         <div class="step" data-scene="menu" data-state="play">
           <p>Try it yourself: tap the menu to build a different evening and see how the number changes.</p>
@@ -252,8 +250,8 @@
     <!-- 7. Hands and toys (full width) -->
     <section class="full" id="toys" aria-labelledby="toys-heading">
       <div class="prose">
-        <h2 id="toys-heading">Bring a hand. Or a toy.</h2>
-        <p>One thing that keeps showing up on that menu is <em>hands</em>. A national survey of about 2,900 U.S. women asked whether they'd ever touched the clitoris during penetration, either themselves or a partner, with fingers or a toy, to orgasm more often or make sex feel better. Researchers call this <strong>pairing</strong>.</p>
+        <h2 id="toys-heading">Bring a hand (or a toy)</h2>
+        <p>Hands came up on that menu too. A national survey of about 2,900 U.S. women asked whether they'd ever touched the clitoris during penetration, either themselves or a partner, with fingers or a toy, to orgasm more often or make sex feel better. Researchers call this <strong>pairing</strong>.</p>
       </div>
       <!-- Live version of experiments/processing-pairing-landscape (run-20261109-182938): one row of four,
            equal drawing size (same bounding-box area, proportions kept); the numbers show the percentages,
@@ -266,10 +264,9 @@
       </figure>
       <div class="prose">
         <p class="fine">These are women who had <em>ever</em> done this, and plenty do more than one. The question asked about orgasm <em>or</em> pleasure, so a yes doesn't mean more orgasms. "Self-applied" means her own hand during penetration, not solo sex.</p>
-        <p>So the know-how clearly exists. It just doesn't always make it into the room.</p>
         <h3 class="sub-head">How long does it take?</h3>
-        <p>It's not just <em>whether</em>, either. It's how long. "Women take forever" is a classic. So: do they?</p>
-        <p>Here's a crowd of 16 people from each group, building toward orgasm. Each line rises in pitch until that person gets there (a dot), or fades out if they don't. Pick who to compare.</p>
+        <p>There's also the old complaint that women "take forever." One study asked 2,304 women in the U.S. and Hungary how long it usually takes them.</p>
+        <p>Below are 16 simulated people from each group. Each line rises in pitch until that person reaches orgasm (a dot), or fades out if they don't. Use the menus to pick the groups.</p>
       </div>
       <figure class="crowd" aria-labelledby="crowd-caption">
         <div class="crowd-controls">
@@ -289,8 +286,8 @@
         <p class="crowd-legend"><span class="crowd-key a">Red lines</span> = first group, <span class="crowd-key b">black lines</span> = second group.</p>
       </figure>
       <div class="prose">
-        <p>Same women, very different clocks: about 8 minutes on their own, about 14 with a partner. The men's line is shorter still, but it's timing something narrower.</p>
-        <p class="fine"><strong>Modeled, not measured.</strong> Only averages are published, so each person's time is drawn from a curve fitted around that average (a log-normal), and the spread is an assumption. <span id="crowd-notes"></span> Women's times: Rowland et al. (2018), self-reported, minute values via secondary coverage. The groups mix studies and measures. Sped up: 1 minute = 1 second.</p>
+        <p>The same women reported about 8 minutes on their own and about 14 with a partner. The men's times are shorter, but they come from a different study that only timed penetration to ejaculation.</p>
+        <p class="fine">These times are modeled. Only averages are published, so each person's time is drawn from a curve fitted around that average (a log-normal), and the spread is an assumption. <span id="crowd-notes"></span> Women's times: Rowland et al. (2018), self-reported, minute values via secondary coverage. The groups mix studies and measures. Sped up: 1 minute = 1 second.</p>
       </div>
     </section>
 
@@ -298,10 +295,9 @@
     <section class="full ending" aria-labelledby="ending-heading">
       <div class="prose">
         <h2 id="ending-heading">So, about that gap.</h2>
-        <p>None of these studies can tell you <em>why</em>. They're snapshots, mostly of people who chose to answer. But look at what moved the numbers and what didn't.</p>
-        <p>Getting older didn't close the gap. Being a woman didn't explain it. What went along with more orgasms was more of the menu: more hands, more mouths, more of the stuff we don't usually count as the main event.</p>
-        <p>Maybe the gap isn't really about bodies. Maybe it's about what we count as sex.</p>
-        <p>The data can't promise anything. But asking, adding to the menu, and bringing a hand along seems like a pretty fun experiment to run.</p>
+        <p>None of these studies can tell you <em>why</em> the gap exists. They're snapshots, mostly of people who chose to answer.</p>
+        <p>They do show what didn't explain it. Getting older didn't close it, and being a woman didn't explain it: lesbian women in the same survey were at 86%. What went along with more orgasms was more of the menu, like oral sex, hands and kissing, the parts of sex that often get treated as extras.</p>
+        <p>One possibility is that the gap has more to do with what people count as sex than with their bodies. The data can't promise that asking for what you want, or bringing a hand along, will change anything, but both are easy to try.</p>
       </div>
     </section>
 
